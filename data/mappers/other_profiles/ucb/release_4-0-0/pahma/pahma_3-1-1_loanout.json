@@ -1,0 +1,557 @@
+{
+  "config": {
+    "profile_basename": "pahma",
+    "version": "3-1-1",
+    "recordtype": "loanout",
+    "document_name": "loansout",
+    "service_name": "Loanout",
+    "service_path": "loansout",
+    "service_type": "procedure",
+    "object_name": "Loanout",
+    "ns_uri": {
+      "loansout_common": "http://collectionspace.org/services/loanout",
+      "loansout_pahma": "http://collectionspace.org/services/loanout/domain/pahma"
+    },
+    "identifier_field": "loanOutNumber",
+    "search_field": "loanOutNumber"
+  },
+  "docstructure": {
+    "loansout_common": {
+      "loanStatusGroupList": {
+        "loanStatusGroup": {
+        }
+      }
+    },
+    "loansout_pahma": {
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "loanOutNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanOutNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "loanPurpose",
+      "transforms": {
+        "vocabulary": "loanpurpose"
+      },
+      "source_type": "vocabulary",
+      "source_name": "loanpurpose",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanPurpose",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanPurpose",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "loanpurpose",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanPurposeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanNotApprovedForPublic",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_pahma",
+      "xpath": [
+
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanNotApprovedForPublic",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersAuthorizer",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersAuthorizer",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersAuthorizerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "lendersAuthorizationDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "lendersAuthorizationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrower",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowerPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrower",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowerOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrower",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrowersContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowersContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrowersContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowersContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrowersAuthorizer",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowersAuthorizer",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrowersAuthorizer",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowersAuthorizerRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "borrowersAuthorizationDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "borrowersAuthorizationDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "specialConditionsOfLoan",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "specialConditionsOfLoan",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanOutNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanOutNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanStatus",
+      "transforms": {
+        "vocabulary": "loanstatus"
+      },
+      "source_type": "vocabulary",
+      "source_name": "loanstatus",
+      "namespace": "loansout_common",
+      "xpath": [
+        "loanStatusGroupList",
+        "loanStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "loanstatus",
+      "namespace": "loansout_common",
+      "xpath": [
+        "loanStatusGroupList",
+        "loanStatusGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanStatusDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+        "loanStatusGroupList",
+        "loanStatusGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanStatusDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanStatusNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+        "loanStatusGroupList",
+        "loanStatusGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanStatusNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanOutDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_pahma",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanOutDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanReturnDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_pahma",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanReturnDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "loanRenewalApplicationDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "loansout_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "loanRenewalApplicationDate",
+      "required": "n"
+    }
+  ]
+}

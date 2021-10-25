@@ -1,0 +1,188 @@
+{
+  "mappers": [
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "uoc",
+      "digest": "961796734c43d9870d2fe27f62b0069e9fcbb1b4884f764bd667262a74a76ac4",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_uoc.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "objecthierarchy",
+      "digest": "bfcf848acbabefe4a5231b3e4405a0755a2f37a57dba9208473a125806fd7dc8",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_objecthierarchy.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "hit",
+      "digest": "2ec0c00dae058fbd65a3a4f537c2be647e8f68eb3ea2d319e649a1bc1cf203de",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_hit.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "group",
+      "digest": "579bb72c7b456fb7f36b207467d7fd3a765b6e99d08c5a62ce37f51749d43c8d",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_group.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "work-local",
+      "digest": "265198ea772085814d5f13d3898ff5bbd283839065dbb76e0604667c5943305e",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_work-local.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "conditioncheck",
+      "digest": "fa310787c7bacaecdb3e8f4cdabdc22b15330700f24a3338f3a4d4a1146a791c",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_conditioncheck.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "nonhierarchicalrelationship",
+      "digest": "cf38cd98665946881d772a782b66e5699c78d418d39e03bef9887b29a345297d",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_nonhierarchicalrelationship.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "authorityhierarchy",
+      "digest": "6ac99e583b95bb4a57384d429633a2705d09b8096081f3b108cceefbf8ab07a3",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_authorityhierarchy.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "citation-local",
+      "digest": "f5d546eb99787913c30c67a4d681871217fd3c5547f9b6908951ee78ed8b314d",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_citation-local.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "intake",
+      "digest": "a30a6179d693149d541ff1d14c17c8b1cb47e8c4ac6eae8c2c0b750359eb2691",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_intake.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "movement",
+      "digest": "ab11532100f87f61d70fce1b8238d4c12fab23ef9525014928cac041e9eafedc",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_movement.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "media",
+      "digest": "5717598f5f90dfc2323a0a67a7c8ec54bf4bdadd2eac14f9221004e691cbef1f",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_media.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "conservation",
+      "digest": "eb8c8cf1d9fa9c95b7a2ffe7b7dcf528ce6374204f042e3a6e12c906892d01ad",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_conservation.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "place-local",
+      "digest": "5f2e2d5ead4ecddc2355c75768350e7863b630d57d2d64a301e0440769b9d33d",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_place-local.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "concept-nomenclature",
+      "digest": "68cca4d282903aaa54ad114c86b39f75483c7fd8034cc1c80f0fcfc0a5742d80",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_concept-nomenclature.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "location-local",
+      "digest": "b0f60aeb93ac33ba915e77868e9e0fa922bb7665ac32f808856e034e758d9d26",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_location-local.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "citation-worldcat",
+      "digest": "6808d511a11ec364195845b64db690d125af6161a2f0a74b3203553a92631943",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_citation-worldcat.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "concept-label-text",
+      "digest": "21f2a33b3bd668d8c9fa00abbfdae40ccb6a3881960aa33b83463d4be3459872",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_concept-label-text.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "work-cona",
+      "digest": "276894274610c55d26e37e85ac1482ae7d09e9fd18c6f05b182e49631cf78b6c",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_work-cona.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "person-local",
+      "digest": "52572fb2d17b77bf58b062e2875ce7242e3963b8b4fdf48123003056fe00dd0f",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_person-local.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "concept-occasion",
+      "digest": "7f6df01610c18333236f496addfe1853128d431c3e41d5b56aaf8f4616ee1f63",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_concept-occasion.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "exhibition",
+      "digest": "adf0f95d6c9e2bf168e6968392b03cba0e537bfd575e9b86eceffa1df8c70ce6",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_exhibition.json"
+    },
+    {
+      "profile": "ucjeps",
+      "version": "2-0-1",
+      "type": "valuation",
+      "digest": "57613143f471d5bb9e1a6ed5c8224dd1a23f16cdf20015f2610179511adc9e2e",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/cspace-deployment/cspace-config-untangler/main/data/mappers/other_profiles/ucb/release_4-0-0/ucjeps/ucjeps_2-0-1_valuation.json"
+    }
+  ]
+}

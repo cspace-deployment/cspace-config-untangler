@@ -1,0 +1,2556 @@
+{
+  "config": {
+    "profile_basename": "ucjeps",
+    "version": "2-0-1",
+    "recordtype": "media",
+    "document_name": "media",
+    "service_name": "Media",
+    "service_path": "media",
+    "service_type": "procedure",
+    "object_name": "Media",
+    "ns_uri": {
+      "media_common": "http://collectionspace.org/services/media",
+      "media_ucjeps": "http://collectionspace.org/services/media/domain/ucjeps"
+    },
+    "identifier_field": "identificationNumber",
+    "search_field": "identificationNumber"
+  },
+  "docstructure": {
+    "media_common": {
+      "publishToList": {
+      },
+      "measuredPartGroupList": {
+        "measuredPartGroup": {
+          "dimensionSubGroupList": {
+            "dimensionSubGroup": {
+            }
+          }
+        }
+      },
+      "languageList": {
+      },
+      "relationList": {
+      },
+      "typeList": {
+      },
+      "dateGroupList": {
+      },
+      "subjectList": {
+      }
+    },
+    "media_ucjeps": {
+      "mediaOtherNumberList": {
+        "mediaOtherNumber": {
+        }
+      },
+      "morphologyCategories": {
+      },
+      "persons": {
+      },
+      "places": {
+      },
+      "mediaTaxaGroupList": {
+        "mediaTaxaGroup": {
+        }
+      },
+      "localityGroupList": {
+        "localityGroup": {
+        }
+      }
+    },
+    "blobs_common": {
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "identificationNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "identificationNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "scientificTaxonomy",
+      "transforms": {
+        "authority": [
+          "taxonomyauthority",
+          "taxon"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "taxon/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "scientificTaxonomy",
+      "required": "n"
+    },
+    {
+      "fieldname": "scientificTaxonomy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxon/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "scientificTaxonomyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "title",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "title",
+      "required": "n"
+    },
+    {
+      "fieldname": "publishTo",
+      "transforms": {
+        "vocabulary": "publishto"
+      },
+      "source_type": "vocabulary",
+      "source_name": "publishto",
+      "namespace": "media_common",
+      "xpath": [
+        "publishToList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publishTo",
+      "required": "n"
+    },
+    {
+      "fieldname": "publishTo",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "publishto",
+      "namespace": "media_common",
+      "xpath": [
+        "publishToList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publishToRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberValue",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaOtherNumberList",
+        "mediaOtherNumber"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberValue",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberType",
+      "transforms": {
+        "vocabulary": "numbertype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "numbertype",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaOtherNumberList",
+        "mediaOtherNumber"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberType",
+      "required": "n"
+    },
+    {
+      "fieldname": "numberType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "numbertype",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaOtherNumberList",
+        "mediaOtherNumber"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "numberTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "handwritten",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "handwrittenValues",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Unknown",
+        "no",
+        "yes"
+      ],
+      "datacolumn": "handwritten",
+      "required": "n"
+    },
+    {
+      "fieldname": "postToPublic",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "yesNoValues",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "no",
+        "yes"
+      ],
+      "datacolumn": "postToPublic",
+      "required": "n"
+    },
+    {
+      "fieldname": "name",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "blobs_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "name",
+      "required": "n"
+    },
+    {
+      "fieldname": "mimeType",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "blobs_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "mimeType",
+      "required": "n"
+    },
+    {
+      "fieldname": "length",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "blobs_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "length",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalUrl",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalUrl",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredPart",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "measuredParts",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "base",
+        "frame",
+        "framed",
+        "image-size",
+        "mount",
+        "paper-size",
+        "plate-size",
+        "unframed"
+      ],
+      "datacolumn": "measuredPart",
+      "required": "n"
+    },
+    {
+      "fieldname": "dimensionSummary",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "dimensionSummary",
+      "required": "n"
+    },
+    {
+      "fieldname": "dimension",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "dimensions",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "area",
+        "base",
+        "circumference",
+        "count",
+        "depth",
+        "diameter",
+        "height",
+        "length",
+        "running-time",
+        "target",
+        "volume",
+        "weight",
+        "width"
+      ],
+      "datacolumn": "dimension",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "institution"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/institution",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByOrganizationInstitution",
+      "required": "n"
+    },
+    {
+      "fieldname": "measuredBy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "measurementMethod",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "measurementMethods",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "balance_beam_scale",
+        "electronic_distance_measurement",
+        "goniometer",
+        "hydraulic_or_pneumatic_scale",
+        "measuring_tape_cloth",
+        "measuring_tape_metal",
+        "microscopy_reticule",
+        "odometer",
+        "optical_range_finder",
+        "osteometric_board",
+        "pacing_pedometer",
+        "protractor",
+        "ruler",
+        "sliding_calipers",
+        "spreading_calipers",
+        "spring_scale",
+        "stadia_transit",
+        "standard_mesh_screen",
+        "taping_chaining",
+        "theodolite_total_station"
+      ],
+      "datacolumn": "measurementMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "value",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "value",
+      "required": "n"
+    },
+    {
+      "fieldname": "measurementUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "measurementUnits",
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "carats",
+        "centimeters",
+        "cubic-centimeters",
+        "feet",
+        "inches",
+        "kilograms",
+        "liters",
+        "meters",
+        "millimeters",
+        "minutes",
+        "ounces",
+        "pixels",
+        "pounds",
+        "square-feet",
+        "stories",
+        "tons"
+      ],
+      "datacolumn": "measurementUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "valueQualifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "valueQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "valueDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup",
+        "dimensionSubGroupList",
+        "dimensionSubGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "valueDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "majorCategory",
+      "transforms": {
+        "vocabulary": "majorcategories"
+      },
+      "source_type": "vocabulary",
+      "source_name": "majorcategories",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "majorCategory",
+      "required": "n"
+    },
+    {
+      "fieldname": "majorCategory",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "majorcategories",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "majorCategoryRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "morphologyCategory",
+      "transforms": {
+        "vocabulary": "morphologycategories"
+      },
+      "source_type": "vocabulary",
+      "source_name": "morphologycategories",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "morphologyCategories"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "morphologyCategory",
+      "required": "n"
+    },
+    {
+      "fieldname": "morphologyCategory",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "morphologycategories",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "morphologyCategories"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "morphologyCategoryRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contributorPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contributorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "institution"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/institution",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contributorOrganizationInstitution",
+      "required": "n"
+    },
+    {
+      "fieldname": "contributor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "contributorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "institution"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/institution",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorOrganizationInstitution",
+      "required": "n"
+    },
+    {
+      "fieldname": "creator",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "creatorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "language",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "media_common",
+      "xpath": [
+        "languageList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "language",
+      "required": "n"
+    },
+    {
+      "fieldname": "language",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "media_common",
+      "xpath": [
+        "languageList"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "languageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "publisher",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publisherPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "publisher",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publisherOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "publisher",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "institution"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/institution",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publisherOrganizationInstitution",
+      "required": "n"
+    },
+    {
+      "fieldname": "publisher",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "publisherRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "relation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "relationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "relation",
+      "required": "n"
+    },
+    {
+      "fieldname": "person",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "persons"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "person",
+      "required": "n"
+    },
+    {
+      "fieldname": "person",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "persons"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "personRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "collector",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "collector",
+      "required": "n"
+    },
+    {
+      "fieldname": "collector",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "collectorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "type",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "mediaTypes",
+      "namespace": "media_common",
+      "xpath": [
+        "typeList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+        "Digital Image",
+        "Illustration",
+        "Scanned Photograph",
+        "Slide (Photograph)",
+        "dataset",
+        "document",
+        "moving_image",
+        "sound",
+        "still_image"
+      ],
+      "datacolumn": "type",
+      "required": "n"
+    },
+    {
+      "fieldname": "coverage",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "coverage",
+      "required": "n"
+    },
+    {
+      "fieldname": "dateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "dateGroupList"
+      ],
+      "data_type": "structured date group",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "dateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "source",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "source",
+      "required": "n"
+    },
+    {
+      "fieldname": "subject",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+        "subjectList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "subject",
+      "required": "n"
+    },
+    {
+      "fieldname": "place",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "places"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "place",
+      "required": "n"
+    },
+    {
+      "fieldname": "place",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "place/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "places"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "placeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "associatedTaxon",
+      "transforms": {
+        "authority": [
+          "taxonomyauthority",
+          "taxon"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "taxon/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaTaxaGroupList",
+        "mediaTaxaGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "associatedTaxon",
+      "required": "n"
+    },
+    {
+      "fieldname": "associatedTaxon",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxon/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaTaxaGroupList",
+        "mediaTaxaGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "associatedTaxonRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "commonName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaTaxaGroupList",
+        "mediaTaxaGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "commonName",
+      "required": "n"
+    },
+    {
+      "fieldname": "interaction",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "associatedTaxaInteractions",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "mediaTaxaGroupList",
+        "mediaTaxaGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "is endophytic in",
+        "is epiphytic on",
+        "is physically supported by",
+        "lives on",
+        "lives/grows with",
+        "living under"
+      ],
+      "datacolumn": "interaction",
+      "required": "n"
+    },
+    {
+      "fieldname": "copyrightStatement",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "copyrightStatement",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightsHolderPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightsHolderOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "institution"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/institution",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightsHolderOrganizationInstitution",
+      "required": "n"
+    },
+    {
+      "fieldname": "rightsHolder",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "rightsHolderRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "description",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "description",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocVerbatim",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocVerbatim",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocPlace",
+      "transforms": {
+        "authority": [
+          "placeauthorities",
+          "place"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "place/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocPlace",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "place/local",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocCounty",
+      "transforms": {
+        "vocabulary": "fieldloccounty"
+      },
+      "source_type": "vocabulary",
+      "source_name": "fieldloccounty",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocCounty",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocCounty",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "fieldloccounty",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocCountyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocState",
+      "transforms": {
+        "vocabulary": "fieldlocstate"
+      },
+      "source_type": "vocabulary",
+      "source_name": "fieldlocstate",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocState",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocState",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "fieldlocstate",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocStateRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocCountry",
+      "transforms": {
+        "vocabulary": "fieldloccountry"
+      },
+      "source_type": "vocabulary",
+      "source_name": "fieldloccountry",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocCountry",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocCountry",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "fieldloccountry",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "fieldLocCountryRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "fieldLocHigherGeography",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "higherGeographies",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "North America",
+        "pacificocean"
+      ],
+      "datacolumn": "fieldLocHigherGeography",
+      "required": "n"
+    },
+    {
+      "fieldname": "vLatitude",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vLatitude",
+      "required": "n"
+    },
+    {
+      "fieldname": "vLongitude",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vLongitude",
+      "required": "n"
+    },
+    {
+      "fieldname": "vCoordinates",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vCoordinates",
+      "required": "n"
+    },
+    {
+      "fieldname": "vOtherCoords",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vOtherCoords",
+      "required": "n"
+    },
+    {
+      "fieldname": "vCoordSys",
+      "transforms": {
+        "vocabulary": "vcoordsys"
+      },
+      "source_type": "vocabulary",
+      "source_name": "vcoordsys",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vCoordSys",
+      "required": "n"
+    },
+    {
+      "fieldname": "vCoordSys",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "vcoordsys",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vCoordSysRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "decimalLatitude",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "decimalLatitude",
+      "required": "n"
+    },
+    {
+      "fieldname": "decimalLongitude",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "decimalLongitude",
+      "required": "n"
+    },
+    {
+      "fieldname": "geodeticDatum",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "geodeticDatums",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "ADG66",
+        "NAD27",
+        "NAD83",
+        "NAD83&amp;WGS84",
+        "Not Recorded",
+        "WGS84"
+      ],
+      "datacolumn": "geodeticDatum",
+      "required": "n"
+    },
+    {
+      "fieldname": "coordUncertainty",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "coordUncertainty",
+      "required": "n"
+    },
+    {
+      "fieldname": "coordUncertaintyUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "coordUncertaintyUnits",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "feet",
+        "kilometers",
+        "meters",
+        "miles",
+        "unknown"
+      ],
+      "datacolumn": "coordUncertaintyUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "vDepth",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vDepth",
+      "required": "n"
+    },
+    {
+      "fieldname": "minDepth",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "minDepth",
+      "required": "n"
+    },
+    {
+      "fieldname": "maxDepth",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "maxDepth",
+      "required": "n"
+    },
+    {
+      "fieldname": "depthUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "depthUnits",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "centimeters",
+        "fathoms",
+        "feet",
+        "furlongs",
+        "inches",
+        "kilometers",
+        "meters",
+        "miles",
+        "rods",
+        "uncertain"
+      ],
+      "datacolumn": "depthUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "vElevation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vElevation",
+      "required": "n"
+    },
+    {
+      "fieldname": "minElevation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "minElevation",
+      "required": "n"
+    },
+    {
+      "fieldname": "maxElevation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "maxElevation",
+      "required": "n"
+    },
+    {
+      "fieldname": "elevationUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "elevationUnits",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "feet",
+        "meters",
+        "uncertain"
+      ],
+      "datacolumn": "elevationUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "vDistanceAboveSurface",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "vDistanceAboveSurface",
+      "required": "n"
+    },
+    {
+      "fieldname": "minDistanceAboveSurface",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "minDistanceAboveSurface",
+      "required": "n"
+    },
+    {
+      "fieldname": "maxDistanceAboveSurface",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "float",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "maxDistanceAboveSurface",
+      "required": "n"
+    },
+    {
+      "fieldname": "distanceAboveSurfaceUnit",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "distanceAboveSurfaceUnits",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "centimeters",
+        "fathoms",
+        "feet",
+        "furlongs",
+        "inches",
+        "kilometers",
+        "meters",
+        "miles",
+        "rods",
+        "uncertain"
+      ],
+      "datacolumn": "distanceAboveSurfaceUnit",
+      "required": "n"
+    },
+    {
+      "fieldname": "localityNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "localityNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "localitySource",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "localitySource",
+      "required": "n"
+    },
+    {
+      "fieldname": "localitySourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "localitySourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "pointRadiusSpatialFit",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "pointRadiusSpatialFit",
+      "required": "n"
+    },
+    {
+      "fieldname": "footprintWKT",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "footprintWKT",
+      "required": "n"
+    },
+    {
+      "fieldname": "footprintSRS",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "footprintSRS",
+      "required": "n"
+    },
+    {
+      "fieldname": "footprintSpatialFit",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "footprintSpatialFit",
+      "required": "n"
+    },
+    {
+      "fieldname": "coordPrecision",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "coordPrecision",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefencedBy",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "geoRefencedBy",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "geoRefDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefProtocol",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "georefProtocols",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "biogeomancer",
+        "chapman-wieczorek-2006-guide-best-practices-georeferencing",
+        "georeferencing-dummies",
+        "manis-herpnet-ornis-georeferencing-guidelines"
+      ],
+      "datacolumn": "geoRefProtocol",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefSource",
+      "transforms": {
+        "vocabulary": "georefsource"
+      },
+      "source_type": "vocabulary",
+      "source_name": "georefsource",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "geoRefSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "georefsource",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "geoRefSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefVerificationStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "georefVerificationStatuses",
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "unverified",
+        "verified-contributor",
+        "verified-data-custodian"
+      ],
+      "datacolumn": "geoRefVerificationStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefRemarks",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "geoRefRemarks",
+      "required": "n"
+    },
+    {
+      "fieldname": "geoRefPlaceName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "media_ucjeps",
+      "xpath": [
+        "localityGroupList",
+        "localityGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "geoRefPlaceName",
+      "required": "n"
+    }
+  ]
+}

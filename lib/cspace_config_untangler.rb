@@ -39,6 +39,11 @@ module CspaceConfigUntangler
     'ohc' => '1-0-4',
     'omca' => '6-1-0',
     'publicart' => '2-0-1',
+    'bampfa' => '2-0-1',
+    'cinefiles' => '1-0-14',
+    'pahma' => '3-1-1',
+    'ucbg' => '2-0-2',
+    'ucjeps' => '2-0-1',
   }
   # Don't change stuff after this
 
