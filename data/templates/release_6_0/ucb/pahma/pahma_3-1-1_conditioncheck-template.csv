@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","","",""
+REQUIRED,y,y,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,date,string,string,string,string,date,string,string,string,string,string,string,string,string,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+REPEATING FIELD GROUP,"","","","","",conditionCheckGroupList < conditionCheckGroup,"","","","","","","","",hazardGroupList < hazardGroup,hazardGroupList < hazardGroup,""
+VALUE SOURCE TYPE,na,na,authority,authority,optionlist,optionlist,na,na,na,na,na,vocabulary,vocabulary,vocabulary,optionlist,na,na
+VALUE SOURCE,"","",person/local,organization/local,"high, low, medium","fair, good, poor, very good","","","","","",temperaturelevel,humiditylevel,lightlevel,"poisonous, radioactive","",""
+CSVHEADER,conditionCheckRefNumber,conditionCheckAssessmentDate,conditionCheckerPerson,conditionCheckerOrganization,conservationTreatmentPriority,condition,nextConditionCheckDate,conditionCheckNote,displayRecommendations,handlingRecommendations,securityRecommendations,tempRequirement,humidityRequirement,lightRequirement,hazard,hazardNote,packingRecommendations
