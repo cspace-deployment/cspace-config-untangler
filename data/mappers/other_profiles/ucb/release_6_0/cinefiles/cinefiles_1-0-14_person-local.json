@@ -1,0 +1,1075 @@
+{
+  "config": {
+    "profile_basename": "cinefiles",
+    "version": "1-0-14",
+    "recordtype": "person",
+    "document_name": "persons",
+    "service_name": "Persons",
+    "service_path": "personauthorities",
+    "service_type": "authority",
+    "object_name": "Person",
+    "ns_uri": {
+      "persons_common": "http://collectionspace.org/services/person",
+      "contacts_common": "http://collectionspace.org/services/contact",
+      "persons_cinefiles": "http://collectionspace.org/services//domain/cinefiles"
+    },
+    "identifier_field": "shortIdentifier",
+    "search_field": "personTermGroupList/0/termDisplayName",
+    "authority_subtypes": [
+      {
+        "name": "Local",
+        "subtype": "person"
+      }
+    ],
+    "authority_type": "personauthorities",
+    "authority_subtype": "person"
+  },
+  "docstructure": {
+    "persons_common": {
+      "personTermGroupList": {
+        "personTermGroup": {
+        }
+      }
+    },
+    "persons_cinefiles": {
+    },
+    "contacts_common": {
+      "emailGroupList": {
+        "emailGroup": {
+        }
+      },
+      "telephoneNumberGroupList": {
+        "telephoneNumberGroup": {
+        }
+      },
+      "faxNumberGroupList": {
+        "faxNumberGroup": {
+        }
+      },
+      "webAddressGroupList": {
+        "webAddressGroup": {
+        }
+      },
+      "addressGroupList": {
+        "addressGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "termDisplayName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termDisplayName",
+      "required": "y"
+    },
+    {
+      "fieldname": "termName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termName",
+      "required": "n"
+    },
+    {
+      "fieldname": "termQualifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "personTermStatuses",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "accepted",
+        "provisional",
+        "rejected",
+        "under review"
+      ],
+      "datacolumn": "termStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {
+        "vocabulary": "persontermtype"
+      },
+      "source_type": "vocabulary",
+      "source_name": "persontermtype",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termType",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "persontermtype",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+        "vocabulary": "persontermflag"
+      },
+      "source_type": "vocabulary",
+      "source_name": "persontermflag",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFlag",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "persontermflag",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFlagRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termPrefForLang",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termPrefForLang",
+      "required": "n"
+    },
+    {
+      "fieldname": "salutation",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "salutations",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "dear",
+        "hello",
+        "to"
+      ],
+      "datacolumn": "salutation",
+      "required": "n"
+    },
+    {
+      "fieldname": "title",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "personTitles",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "Baron",
+        "Baroness",
+        "Dame",
+        "Dr",
+        "Lady",
+        "Lord",
+        "Miss",
+        "Mr",
+        "Mrs",
+        "Ms",
+        "Professor",
+        "Sir"
+      ],
+      "datacolumn": "title",
+      "required": "n"
+    },
+    {
+      "fieldname": "foreName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "foreName",
+      "required": "n"
+    },
+    {
+      "fieldname": "middleName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "middleName",
+      "required": "n"
+    },
+    {
+      "fieldname": "surName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "surName",
+      "required": "n"
+    },
+    {
+      "fieldname": "nameAdditions",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "nameAdditions",
+      "required": "n"
+    },
+    {
+      "fieldname": "initials",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "initials",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+        "authority": [
+          "citationauthorities",
+          "citation"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "citation/local",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "citation/local",
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceID",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceID",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+        "personTermGroupList",
+        "personTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "gender",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "genders",
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "female",
+        "male"
+      ],
+      "datacolumn": "gender",
+      "required": "n"
+    },
+    {
+      "fieldname": "birthCity",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_cinefiles",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "birthCity",
+      "required": "n"
+    },
+    {
+      "fieldname": "birthState",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_cinefiles",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "birthState",
+      "required": "n"
+    },
+    {
+      "fieldname": "birthPlace",
+      "transforms": {
+        "vocabulary": "country"
+      },
+      "source_type": "vocabulary",
+      "source_name": "country",
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "birthPlace",
+      "required": "n"
+    },
+    {
+      "fieldname": "birthPlace",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "country",
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "birthPlaceRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "birthDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "birthDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "deathDateGroup",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "structured date group",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "deathDateGroup",
+      "required": "n"
+    },
+    {
+      "fieldname": "bioNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "bioNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "nameNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "persons_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "nameNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "accessCode",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "accessCodes",
+      "namespace": "persons_cinefiles",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Campus (UCB)",
+        "Education (*.edu)",
+        "In House Only",
+        "PFA Staff Only",
+        "World"
+      ],
+      "datacolumn": "accessCode",
+      "required": "n"
+    },
+    {
+      "fieldname": "email",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "emailGroupList",
+        "emailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "email",
+      "required": "n"
+    },
+    {
+      "fieldname": "emailType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "emailTypes",
+      "namespace": "contacts_common",
+      "xpath": [
+        "emailGroupList",
+        "emailGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "business",
+        "other",
+        "personal"
+      ],
+      "datacolumn": "emailType",
+      "required": "n"
+    },
+    {
+      "fieldname": "telephoneNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "telephoneNumberGroupList",
+        "telephoneNumberGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "telephoneNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "telephoneNumberType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "telephoneNumberTypes",
+      "namespace": "contacts_common",
+      "xpath": [
+        "telephoneNumberGroupList",
+        "telephoneNumberGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "business",
+        "home",
+        "mobile",
+        "other"
+      ],
+      "datacolumn": "telephoneNumberType",
+      "required": "n"
+    },
+    {
+      "fieldname": "faxNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "faxNumberGroupList",
+        "faxNumberGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "faxNumber",
+      "required": "n"
+    },
+    {
+      "fieldname": "faxNumberType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "faxNumberTypes",
+      "namespace": "contacts_common",
+      "xpath": [
+        "faxNumberGroupList",
+        "faxNumberGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "business",
+        "home",
+        "other"
+      ],
+      "datacolumn": "faxNumberType",
+      "required": "n"
+    },
+    {
+      "fieldname": "webAddress",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "webAddressGroupList",
+        "webAddressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "webAddress",
+      "required": "n"
+    },
+    {
+      "fieldname": "webAddressType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "webAddressTypes",
+      "namespace": "contacts_common",
+      "xpath": [
+        "webAddressGroupList",
+        "webAddressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "business",
+        "other",
+        "personal"
+      ],
+      "datacolumn": "webAddressType",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressPlace1",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressPlace1",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressPlace2",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressPlace2",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressMunicipality",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressMunicipality",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressStateOrProvince",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressStateOrProvince",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressPostCode",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressPostCode",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressCountry",
+      "transforms": {
+        "vocabulary": "country"
+      },
+      "source_type": "vocabulary",
+      "source_name": "country",
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressCountry",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressCountry",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "country",
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "addressCountryRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "addressType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "addressTypes",
+      "namespace": "contacts_common",
+      "xpath": [
+        "addressGroupList",
+        "addressGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "business",
+        "home",
+        "other"
+      ],
+      "datacolumn": "addressType",
+      "required": "n"
+    }
+  ]
+}
