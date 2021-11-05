@@ -10,7 +10,7 @@
     "object_name": "Loanout",
     "ns_uri": {
       "loansout_common": "http://collectionspace.org/services/loanout",
-      "loansout_naturalhistory": null
+      "loansout_naturalhistory": "http://collectionspace.org/services/loanout/domain/naturalhistory"
     },
     "identifier_field": "loanOutNumber",
     "search_field": "loanOutNumber"

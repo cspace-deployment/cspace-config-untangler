@@ -10,7 +10,7 @@
     "object_name": "Media",
     "ns_uri": {
       "media_common": "http://collectionspace.org/services/media",
-      "media_botgarden": null
+      "media_botgarden": "http://collectionspace.org/services/media/local/botgarden"
     },
     "identifier_field": "identificationNumber",
     "search_field": "identificationNumber"

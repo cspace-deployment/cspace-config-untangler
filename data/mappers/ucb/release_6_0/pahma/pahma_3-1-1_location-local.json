@@ -10,7 +10,7 @@
     "object_name": "Locationitem",
     "ns_uri": {
       "locations_common": "http://collectionspace.org/services/location",
-      "locations_anthropology": null
+      "locations_anthropology": "http://collectionspace.org/services/location/domain/anthropology"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "locationTermGroupList/0/termDisplayName",

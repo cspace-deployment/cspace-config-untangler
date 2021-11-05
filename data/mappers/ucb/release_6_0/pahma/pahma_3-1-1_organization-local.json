@@ -11,7 +11,7 @@
     "ns_uri": {
       "organizations_common": "http://collectionspace.org/services/organization",
       "contacts_common": "http://collectionspace.org/services/contact",
-      "organizations_anthropology": null
+      "organizations_anthropology": "http://collectionspace.org/services/organization/domain/anthropology"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "organizationTermGroupList/0/termDisplayName",

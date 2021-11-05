@@ -10,11 +10,11 @@
     "object_name": "Loanout",
     "ns_uri": {
       "loansout_common": "http://collectionspace.org/services/loanout",
-      "loansout_botgarden": null,
-      "loansout_naturalhistory": null
+      "loansout_botgarden": "http://collectionspace.org/services/loanout/local/botgarden",
+      "loansout_naturalhistory": "http://collectionspace.org/services/loanout/domain/naturalhistory"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "borrower",
+    "search_field": "borrower"
   },
   "docstructure": {
     "loansout_botgarden": {

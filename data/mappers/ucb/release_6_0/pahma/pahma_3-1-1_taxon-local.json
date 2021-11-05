@@ -9,7 +9,7 @@
     "service_type": "authority",
     "object_name": "Taxon",
     "ns_uri": {
-      "taxon_common": null
+      "taxon_common": "http://collectionspace.org/services/taxonomy"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "taxonTermGroupList/0/termDisplayName",

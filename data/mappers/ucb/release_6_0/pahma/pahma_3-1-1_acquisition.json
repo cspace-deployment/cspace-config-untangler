@@ -11,7 +11,7 @@
     "ns_uri": {
       "acquisitions_common": "http://collectionspace.org/services/acquisition",
       "acquisitions_pahma": "http://collectionspace.org/services/acquisition/domain/pahma",
-      "acquisitions_anthropology": null
+      "acquisitions_anthropology": "http://collectionspace.org/services/acquisition/domain/anthropology"
     },
     "identifier_field": "acquisitionReferenceNumber",
     "search_field": "acquisitionReferenceNumber"

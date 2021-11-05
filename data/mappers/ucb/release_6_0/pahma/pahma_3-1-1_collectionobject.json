@@ -12,7 +12,7 @@
       "collectionobjects_common": "http://collectionspace.org/services/collectionobject",
       "collectionobjects_pahma": "http://collectionspace.org/services/collectionobject/domain/pahma",
       "collectionobjects_anthropology": "http://collectionspace.org/services/collectionobject/domain/anthropology",
-      "collectionobjects_naturalhistory": null,
+      "collectionobjects_naturalhistory": "http://collectionspace.org/services/collectionobject/domain/naturalhistory",
       "collectionobjects_annotation": "http://collectionspace.org/services/collectionobject/domain/annotation",
       "collectionobjects_nagpra": "http://collectionspace.org/services/collectionobject/domain/nagpra"
     },

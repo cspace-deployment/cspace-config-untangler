@@ -10,7 +10,7 @@
     "object_name": "Movement",
     "ns_uri": {
       "movements_common": "http://collectionspace.org/services/movement",
-      "movements_anthropology": null
+      "movements_anthropology": "http://collectionspace.org/services/movement/domain/anthropology"
     },
     "identifier_field": "movementReferenceNumber",
     "search_field": "movementReferenceNumber"

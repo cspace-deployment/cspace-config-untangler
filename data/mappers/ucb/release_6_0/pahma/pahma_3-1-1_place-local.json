@@ -10,9 +10,9 @@
     "object_name": "Placeitem",
     "ns_uri": {
       "places_common": "http://collectionspace.org/services/place",
-      "places_anthropology": null,
-      "places_pahma": "http://collectionspace.org/services//domain/pahma",
-      "places_anthro": null
+      "places_anthropology": "http://collectionspace.org/services/place/domain/anthropology",
+      "places_pahma": "http://collectionspace.org/services/domain/pahma",
+      "places_anthro": "http://collectionspace.org/services/place/domain/anthro"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "placeTermGroupList/0/termDisplayName",

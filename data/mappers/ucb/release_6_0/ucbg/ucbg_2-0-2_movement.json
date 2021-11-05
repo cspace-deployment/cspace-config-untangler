@@ -10,10 +10,10 @@
     "object_name": "Movement",
     "ns_uri": {
       "movements_common": "http://collectionspace.org/services/movement",
-      "movements_botgarden": null
+      "movements_botgarden": "http://collectionspace.org/services/movement/local/botgarden"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "gardenLocation",
+    "search_field": "gardenLocation"
   },
   "docstructure": {
     "movements_common": {

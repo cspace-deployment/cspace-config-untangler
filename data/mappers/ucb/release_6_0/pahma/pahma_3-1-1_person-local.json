@@ -11,7 +11,7 @@
     "ns_uri": {
       "persons_common": "http://collectionspace.org/services/person",
       "contacts_common": "http://collectionspace.org/services/contact",
-      "persons_anthropology": null
+      "persons_anthropology": "http://collectionspace.org/services/person/domain/anthropology"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "personTermGroupList/0/termDisplayName",

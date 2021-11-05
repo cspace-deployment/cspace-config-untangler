@@ -10,7 +10,7 @@
     "object_name": "ObjectExit",
     "ns_uri": {
       "objectexit_common": "http://collectionspace.org/services/objectexit",
-      "objectexit_anthropology": null
+      "objectexit_anthropology": "http://collectionspace.org/services/objectexit/domain/anthropology"
     },
     "identifier_field": "exitNumber",
     "search_field": "exitNumber"

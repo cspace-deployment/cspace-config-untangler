@@ -12,8 +12,8 @@
       "media_common": "http://collectionspace.org/services/media",
       "media_pahma": "http://collectionspace.org/services/media/domain/pahma"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "identificationNumber",
+    "search_field": "identificationNumber"
   },
   "docstructure": {
     "media_common": {

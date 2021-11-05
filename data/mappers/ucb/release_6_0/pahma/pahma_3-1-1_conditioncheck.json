@@ -10,10 +10,10 @@
     "object_name": "Conditioncheck",
     "ns_uri": {
       "conditionchecks_common": "http://collectionspace.org/services/conditioncheck",
-      "conditionchecks_anthropology": null
+      "conditionchecks_anthropology": "http://collectionspace.org/services/conditioncheck/domain/anthropology"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "conditionCheckRefNumber",
+    "search_field": "conditionCheckRefNumber"
   },
   "docstructure": {
     "conditionchecks_common": {

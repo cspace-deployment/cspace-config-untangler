@@ -1,0 +1,8 @@
+"Before importing CSV, delete initial column and rows above the CSVHEADER row","","","","","","","","","","","","","","","",""
+REQUIRED,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+DATA TYPE,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string
+REPEATABLE FIELD?,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n
+REPEATING FIELD GROUP,"","","",fieldChangedGroupList < fieldChangedGroup,fieldChangedGroupList < fieldChangedGroup,fieldChangedGroupList < fieldChangedGroup,fieldChangedGroupList < fieldChangedGroup,relationshipGroupList < relationshipGroup,relationshipGroupList < relationshipGroup,relationshipGroupList < relationshipGroup,relationshipGroupList < relationshipGroup,"","","","",""
+VALUE SOURCE TYPE,na,na,na,na,na,na,na,na,na,na,na,na,na,na,na,na
+VALUE SOURCE,"","","","","","","","","","","","","","","",""
+CSVHEADER,idNumber,recordType,recordId,fieldName,originalValue,newValue,changeReason,relPredicate,relObjRecordType,relObjectTitle,relChange,relRecordChecksum,saveMessage,updatedBy,updatedAt,recordChecksum

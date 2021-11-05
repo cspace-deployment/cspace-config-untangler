@@ -10,10 +10,10 @@
     "object_name": "ObjectExit",
     "ns_uri": {
       "objectexit_common": "http://collectionspace.org/services/objectexit",
-      "objectexit_naturalhistory": null
+      "objectexit_naturalhistory": "http://collectionspace.org/objectexit/domain/naturalhistory"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "exitNumber",
+    "search_field": "exitNumber"
   },
   "docstructure": {
     "objectexit_common": {

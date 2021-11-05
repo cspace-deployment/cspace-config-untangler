@@ -9,8 +9,8 @@
     "service_type": "authority",
     "object_name": "Taxon",
     "ns_uri": {
-      "taxon_common": null,
-      "taxon_naturalhistory": null
+      "taxon_common": "http://collectionspace.org/services/taxonomy",
+      "taxon_naturalhistory": "http://collectionspace.org/services/taxon/domain/naturalhistory"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "taxonTermGroupList/0/termDisplayName",

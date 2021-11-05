@@ -11,7 +11,7 @@
     "ns_uri": {
       "claims_common": "http://collectionspace.org/services/claim",
       "claims_pahma": "http://collectionspace.org/services/claim/domain/pahma",
-      "claims_anthropology": null
+      "claims_anthropology": "http://collectionspace.org/services/claim/domain/anthropology"
     },
     "identifier_field": "claimNumber",
     "search_field": "claimNumber"

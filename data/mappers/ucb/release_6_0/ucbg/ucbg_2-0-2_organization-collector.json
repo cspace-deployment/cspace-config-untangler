@@ -11,7 +11,7 @@
     "ns_uri": {
       "organizations_common": "http://collectionspace.org/services/organization",
       "contacts_common": "http://collectionspace.org/services/contact",
-      "organizations_naturalhistory": null
+      "organizations_naturalhistory": "http://collectionspace.org/services/organization/domain/naturalhistory"
     },
     "identifier_field": "shortIdentifier",
     "search_field": "organizationTermGroupList/0/termDisplayName",

@@ -11,10 +11,10 @@
     "ns_uri": {
       "media_common": "http://collectionspace.org/services/media",
       "media_cinefiles": "http://collectionspace.org/services/media/domain/cinefiles",
-      "media_piction": null
+      "media_piction": "http://collectionspace.org/services/media"
     },
-    "identifier_field": null,
-    "search_field": null
+    "identifier_field": "page",
+    "search_field": "page"
   },
   "docstructure": {
     "media_cinefiles": {

@@ -10,7 +10,7 @@
     "object_name": "CollectionObject",
     "ns_uri": {
       "collectionobjects_common": "http://collectionspace.org/services/collectionobject",
-      "collectionobjects_naturalhistory": null,
+      "collectionobjects_naturalhistory": "http://collectionspace.org/services/collectionobject/domain/naturalhistory",
       "collectionobjects_ucjeps": "http://collectionspace.org/services/collectionobject/domain/ucjeps",
       "collectionobjects_annotation": "http://collectionspace.org/services/collectionobject/domain/annotation"
     },
