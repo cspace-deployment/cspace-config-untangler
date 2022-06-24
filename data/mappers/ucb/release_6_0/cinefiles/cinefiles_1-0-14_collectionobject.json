@@ -1400,6 +1400,26 @@
       "required": "n"
     },
     {
+      "fieldname": "measuredPartNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "collectionobjects_common",
+      "xpath": [
+        "measuredPartGroupList",
+        "measuredPartGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "measuredPartNote",
+      "required": "n"
+    },
+    {
       "fieldname": "objectStatus",
       "transforms": {
       },

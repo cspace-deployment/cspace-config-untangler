@@ -10,8 +10,8 @@
     "object_name": "CollectionObject",
     "ns_uri": {
       "collectionobjects_common": "http://collectionspace.org/services/collectionobject",
-      "collectionobjects_botgarden": null,
-      "collectionobjects_naturalhistory": null,
+      "collectionobjects_botgarden": "http://collectionspace.org/services/collectionobject/local/botgarden",
+      "collectionobjects_naturalhistory": "http://collectionspace.org/services/collectionobject/domain/naturalhistory",
       "collectionobjects_accessionuse": "http://collectionspace.org/services/collectionobject/domain/accessionuse",
       "collectionobjects_annotation": "http://collectionspace.org/services/collectionobject/domain/annotation"
     },

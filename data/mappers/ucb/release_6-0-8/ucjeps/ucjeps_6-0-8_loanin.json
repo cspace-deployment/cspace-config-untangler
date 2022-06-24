@@ -10,7 +10,7 @@
     "object_name": "Loanin",
     "ns_uri": {
       "loansin_common": "http://collectionspace.org/services/loanin",
-      "loansin_naturalhistory": null
+      "loansin_naturalhistory": "http://collectionspace.org/services/loanin/domain/naturalhistory"
     },
     "identifier_field": "lenderLoanNumber",
     "search_field": "lenderLoanNumber"
