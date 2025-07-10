@@ -1,0 +1,1371 @@
+{
+  "config": {
+    "profile_basename": "ucbg",
+    "version": "4-0-0",
+    "recordtype": "taxon",
+    "document_name": "taxon",
+    "service_name": "Taxon",
+    "service_path": "taxonomyauthority",
+    "service_type": "authority",
+    "object_name": "Taxon",
+    "ns_uri": {
+      "taxon_common": "http://collectionspace.org/services/taxonomy",
+      "taxon_naturalhistory": "http://collectionspace.org/services/taxon/domain/naturalhistory"
+    },
+    "identifier_field": "shortIdentifier",
+    "search_field": "taxonTermGroupList/0/termDisplayName",
+    "authority_subtypes": [
+      {
+        "name": "Local",
+        "subtype": "taxon"
+      },
+      {
+        "name": "Common",
+        "subtype": "common"
+      },
+      {
+        "name": "Plant Sale",
+        "subtype": "plantsales"
+      }
+    ],
+    "authority_type": "taxonomyauthority",
+    "authority_subtype": "taxon"
+  },
+  "docstructure": {
+    "taxon_common": {
+      "taxonTermGroupList": {
+        "taxonTermGroup": {
+        }
+      },
+      "taxonAuthorGroupList": {
+        "taxonAuthorGroup": {
+        }
+      },
+      "taxonCitationList": {
+      }
+    },
+    "taxon_naturalhistory": {
+      "naturalHistoryCommonNameGroupList": {
+        "naturalHistoryCommonNameGroup": {
+        }
+      },
+      "relatedTermGroupList": {
+        "relatedTermGroup": {
+        }
+      },
+      "plantAttributesGroupList": {
+        "plantAttributesGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "termDisplayName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termDisplayName",
+      "required": "y"
+    },
+    {
+      "fieldname": "termFormattedDisplayName",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFormattedDisplayName",
+      "required": "n"
+    },
+    {
+      "fieldname": "termQualifier",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termQualifier",
+      "required": "n"
+    },
+    {
+      "fieldname": "termType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ucbgTaxonTermTypes",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "Grex Name",
+        "Taxon No Author Name",
+        "Unverified Name",
+        "Verified Taxonomic Name"
+      ],
+      "datacolumn": "termType",
+      "required": "n"
+    },
+    {
+      "fieldname": "termStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonTermStatuses",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "accepted",
+        "provisional",
+        "rejected",
+        "under review"
+      ],
+      "datacolumn": "termStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+        "vocabulary": "taxontermflag"
+      },
+      "source_type": "vocabulary",
+      "source_name": "taxontermflag",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFlag",
+      "required": "n"
+    },
+    {
+      "fieldname": "termFlag",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxontermflag",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termFlagRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonomicStatus",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ucbgTaxonomicStatuses",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "accepted",
+        "illegitimate",
+        "invalid",
+        "misapplied",
+        "synonym",
+        "unpublished",
+        "valid"
+      ],
+      "datacolumn": "taxonomicStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "termLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "termPrefForLang",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termPrefForLang",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSource",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonTermSources",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "Owner, Database",
+        "Royal Botanical Gardens (KEW)",
+        "UC Botanical Garden"
+      ],
+      "datacolumn": "termSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceID",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceID",
+      "required": "n"
+    },
+    {
+      "fieldname": "termSourceNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonTermGroupList",
+        "taxonTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "termSourceNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonRank",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ucbgTaxonRanks",
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "class",
+        "cultivar",
+        "division",
+        "family",
+        "form",
+        "genus",
+        "grex",
+        "group",
+        "kingdom",
+        "nothomorph",
+        "order",
+        "proles",
+        "race",
+        "section",
+        "series",
+        "species",
+        "subclass",
+        "subdivision",
+        "subfamily",
+        "subform",
+        "subgenus",
+        "subkingdom",
+        "suborder",
+        "subsection",
+        "subseries",
+        "subspecies",
+        "subtribe",
+        "subvariety",
+        "tribe",
+        "unknown",
+        "variety"
+      ],
+      "datacolumn": "taxonRank",
+      "required": "n"
+    },
+    {
+      "fieldname": "accessRestrictions",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonAccessCodes",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "Dead",
+        "Restricted",
+        "Unrestricted"
+      ],
+      "datacolumn": "accessRestrictions",
+      "required": "n"
+    },
+    {
+      "fieldname": "family",
+      "transforms": {
+        "authority": [
+          "taxonomyauthority",
+          "taxon"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "taxon/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "family",
+      "required": "n"
+    },
+    {
+      "fieldname": "family",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxon/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "familyRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonAuthorPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "group_org"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/group",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonAuthorOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonAuthorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonAuthorType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "ucbgTaxonAuthorTypes",
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonAuthorGroupList",
+        "taxonAuthorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "ascribed author",
+        "author",
+        "parenthetical ascribed author",
+        "parenthetical author"
+      ],
+      "datacolumn": "taxonAuthorType",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonYear",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonYear",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonIsNamedHybrid",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonIsNamedHybrid",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonBasionym",
+      "transforms": {
+        "authority": [
+          "taxonomyauthority",
+          "taxon"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "taxon/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonBasionym",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonBasionym",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxon/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonBasionymRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonCitation",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+        "taxonCitationList"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonCitation",
+      "required": "n"
+    },
+    {
+      "fieldname": "taxonNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "taxonNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonName",
+      "transforms": {
+        "authority": [
+          "taxonomyauthority",
+          "common"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "taxon/common",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "naturalHistoryCommonName",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonName",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxon/common",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "naturalHistoryCommonNameRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonNameLanguage",
+      "transforms": {
+        "vocabulary": "languages"
+      },
+      "source_type": "vocabulary",
+      "source_name": "languages",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "naturalHistoryCommonNameLanguage",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonNameLanguage",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "languages",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "naturalHistoryCommonNameLanguageRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonNameSource",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "naturalHistoryCommonNameSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonNameSourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "naturalHistoryCommonNameSourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "naturalHistoryCommonNameType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonCommonNameTypes",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "naturalHistoryCommonNameGroupList",
+        "naturalHistoryCommonNameGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "preferred",
+        "rejected",
+        "secondary"
+      ],
+      "datacolumn": "naturalHistoryCommonNameType",
+      "required": "n"
+    },
+    {
+      "fieldname": "relatedTerm",
+      "transforms": {
+        "authority": [
+          "taxonomyauthority",
+          "taxon"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "taxon/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "relatedTermGroupList",
+        "relatedTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "relatedTerm",
+      "required": "n"
+    },
+    {
+      "fieldname": "relatedTerm",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "taxon/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "relatedTermGroupList",
+        "relatedTermGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "relatedTermRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "relatedTermType",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "taxonRelatedTermTypes",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "relatedTermGroupList",
+        "relatedTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+        "Female Hybrid Parent",
+        "Male Hybrid Parent",
+        "Synonym"
+      ],
+      "datacolumn": "relatedTermType",
+      "required": "n"
+    },
+    {
+      "fieldname": "relatedTermSource",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "relatedTermGroupList",
+        "relatedTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "relatedTermSource",
+      "required": "n"
+    },
+    {
+      "fieldname": "relatedTermSourceDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "relatedTermGroupList",
+        "relatedTermGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "relatedTermSourceDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "attributeDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "attributeDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "recordedBy",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recordedByPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "recordedBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recordedByOrganizationLocal",
+      "required": "n"
+    },
+    {
+      "fieldname": "recordedBy",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "collector"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/collector",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recordedByOrganizationCollector",
+      "required": "n"
+    },
+    {
+      "fieldname": "recordedBy",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "recordedByRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "habitat",
+      "transforms": {
+        "vocabulary": "habitat"
+      },
+      "source_type": "vocabulary",
+      "source_name": "habitat",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "habitat",
+      "required": "n"
+    },
+    {
+      "fieldname": "habitat",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "habitat",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "habitatRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "climateRating",
+      "transforms": {
+        "vocabulary": "climateRating"
+      },
+      "source_type": "vocabulary",
+      "source_name": "climateRating",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "climateRating",
+      "required": "n"
+    },
+    {
+      "fieldname": "climateRating",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "climateRating",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "climateRatingRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "height",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "height",
+      "required": "n"
+    },
+    {
+      "fieldname": "width",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "width",
+      "required": "n"
+    },
+    {
+      "fieldname": "diameterBreastHeight",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "diameterBreastHeight",
+      "required": "n"
+    },
+    {
+      "fieldname": "conservationOrganization",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conservationOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "conservationOrganization",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "organization/local",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conservationOrganizationRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "conservationCategory",
+      "transforms": {
+        "authority": [
+          "conceptauthorities",
+          "conservation_ca"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "concept/conservation",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conservationCategory",
+      "required": "n"
+    },
+    {
+      "fieldname": "conservationCategory",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "concept/conservation",
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "conservationCategoryRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "frostSensitive",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "frostSensitive",
+      "required": "n"
+    },
+    {
+      "fieldname": "medicinalUse",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "medicinalUse",
+      "required": "n"
+    },
+    {
+      "fieldname": "economicUse",
+      "transforms": {
+        "special": [
+          "boolean"
+        ]
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "taxon_naturalhistory",
+      "xpath": [
+        "plantAttributesGroupList",
+        "plantAttributesGroup"
+      ],
+      "data_type": "boolean",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "economicUse",
+      "required": "n"
+    }
+  ]
+}

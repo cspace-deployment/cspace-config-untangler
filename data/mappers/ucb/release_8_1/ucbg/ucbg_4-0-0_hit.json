@@ -1,0 +1,1266 @@
+{
+  "config": {
+    "profile_basename": "ucbg",
+    "version": "4-0-0",
+    "recordtype": "hit",
+    "document_name": "hits",
+    "service_name": "Hit",
+    "service_path": "hits",
+    "service_type": "procedure",
+    "object_name": "Hit",
+    "ns_uri": {
+      "hits_common": "http://collectionspace.org/services/hit"
+    },
+    "identifier_field": "hitNumber",
+    "search_field": "hitNumber"
+  },
+  "docstructure": {
+    "hits_common": {
+      "hitDepositorGroupList": {
+        "hitDepositorGroup": {
+        }
+      },
+      "agreementGroupList": {
+        "agreementGroup": {
+        }
+      },
+      "entryMethods": {
+      },
+      "agreementRenewalDates": {
+      },
+      "internalApprovalGroupList": {
+        "internalApprovalGroup": {
+        }
+      },
+      "externalApprovalGroupList": {
+        "externalApprovalGroup": {
+        }
+      },
+      "handlingLimitationsGroupList": {
+        "handlingLimitationsGroup": {
+        }
+      },
+      "correspondenceGroupList": {
+        "correspondenceGroup": {
+        }
+      }
+    }
+  },
+  "mappings": [
+    {
+      "fieldname": "hitNumber",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "hitNumber",
+      "required": "y"
+    },
+    {
+      "fieldname": "entryDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "entryDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositorContact",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorContact",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositorContact",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorContactRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositorContactType",
+      "transforms": {
+        "vocabulary": "depositorcontacttypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "depositorcontacttypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorContactType",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositorContactType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "depositorcontacttypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorContactTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "depositorNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "hitDepositorGroupList",
+        "hitDepositorGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "depositorNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementStatus",
+      "transforms": {
+        "vocabulary": "agreementstatuses"
+      },
+      "source_type": "vocabulary",
+      "source_name": "agreementstatuses",
+      "namespace": "hits_common",
+      "xpath": [
+        "agreementGroupList",
+        "agreementGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "agreementstatuses",
+      "namespace": "hits_common",
+      "xpath": [
+        "agreementGroupList",
+        "agreementGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementStatusDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "agreementGroupList",
+        "agreementGroup"
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementStatusDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementStatusNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "agreementGroupList",
+        "agreementGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementStatusNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "entryMethod",
+      "transforms": {
+        "vocabulary": "entrymethod"
+      },
+      "source_type": "vocabulary",
+      "source_name": "entrymethod",
+      "namespace": "hits_common",
+      "xpath": [
+        "entryMethods"
+      ],
+      "data_type": "string",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "entryMethod",
+      "required": "n"
+    },
+    {
+      "fieldname": "entryMethod",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "entrymethod",
+      "namespace": "hits_common",
+      "xpath": [
+        "entryMethods"
+      ],
+      "data_type": "csrefname",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "entryMethodRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "agreementRenewalDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "agreementRenewalDates"
+      ],
+      "data_type": "date",
+      "repeats": "y",
+      "in_repeating_group": "n",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "agreementRenewalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "entryReason",
+      "transforms": {
+      },
+      "source_type": "optionlist",
+      "source_name": "entryReasons",
+      "namespace": "hits_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+        "commission",
+        "consideration",
+        "enquiry",
+        "loan"
+      ],
+      "datacolumn": "entryReason",
+      "required": "n"
+    },
+    {
+      "fieldname": "returnDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+
+      ],
+      "data_type": "date",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "returnDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "entryNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "entryNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalGroupName",
+      "transforms": {
+        "vocabulary": "hitapprovalgroups"
+      },
+      "source_type": "vocabulary",
+      "source_name": "hitapprovalgroups",
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalGroupName",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalGroupName",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "hitapprovalgroups",
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalGroupNameRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalIndividual",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalIndividual",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalStatus",
+      "transforms": {
+        "vocabulary": "hitapprovaltypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "hitapprovaltypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "hitapprovaltypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "internalApprovalNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "internalApprovalGroupList",
+        "internalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "internalApprovalNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalGroupName",
+      "transforms": {
+        "vocabulary": "hitapprovalgroups"
+      },
+      "source_type": "vocabulary",
+      "source_name": "hitapprovalgroups",
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalGroupName",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalGroupName",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "hitapprovalgroups",
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalGroupNameRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalIndividual",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalIndividual",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalIndividual",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalIndividualRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalStatus",
+      "transforms": {
+        "vocabulary": "hitapprovaltypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "hitapprovaltypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalStatus",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalStatus",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "hitapprovaltypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalStatusRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "externalApprovalNote",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "externalApprovalGroupList",
+        "externalApprovalGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "externalApprovalNote",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingPreferences",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "n/a",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingPreferences",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsType",
+      "transforms": {
+        "vocabulary": "handlinglimitationstypes"
+      },
+      "source_type": "vocabulary",
+      "source_name": "handlinglimitationstypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsType",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsType",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "handlinglimitationstypes",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsTypeRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsLevel",
+      "transforms": {
+        "vocabulary": "handlinglimitationslevels"
+      },
+      "source_type": "vocabulary",
+      "source_name": "handlinglimitationslevels",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsLevel",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsLevel",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "handlinglimitationslevels",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsLevelRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsDetail",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsDetail",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsRequestor",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsRequestorPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsRequestor",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsRequestorOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsRequestor",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsRequestorRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsOnBehalfOfPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsOnBehalfOf",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsOnBehalfOfOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsOnBehalfOf",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsOnBehalfOfRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "handlingLimitationsDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "handlingLimitationsGroupList",
+        "handlingLimitationsGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "handlingLimitationsDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceDate",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceDate",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSender",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceSenderPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSender",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceSenderOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSender",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceSenderRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceRecipient",
+      "transforms": {
+        "authority": [
+          "personauthorities",
+          "person"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceRecipientPerson",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceRecipient",
+      "transforms": {
+        "authority": [
+          "orgauthorities",
+          "organization"
+        ]
+      },
+      "source_type": "authority",
+      "source_name": "organization/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceRecipientOrganization",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceRecipient",
+      "transforms": {
+      },
+      "source_type": "refname",
+      "source_name": "person/local",
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "csrefname",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceRecipientRefname",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceSummary",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceSummary",
+      "required": "n"
+    },
+    {
+      "fieldname": "correspondenceReference",
+      "transforms": {
+      },
+      "source_type": "na",
+      "source_name": null,
+      "namespace": "hits_common",
+      "xpath": [
+        "correspondenceGroupList",
+        "correspondenceGroup"
+      ],
+      "data_type": "string",
+      "repeats": "n",
+      "in_repeating_group": "y",
+      "opt_list_values": [
+
+      ],
+      "datacolumn": "correspondenceReference",
+      "required": "n"
+    }
+  ]
+}
